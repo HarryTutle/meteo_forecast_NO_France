@@ -1,5 +1,5 @@
 # meteo_forecast_NO_France
- a package to store Meteo-France weather data (findable in open office in kaggle) in a good shape for sklearn. Inside this package you have a class (Meteo_data_view) which use five parameters:
+ a package (Meteo_data_shape_weather) to store Meteo-France weather data (findable in open office in kaggle) in a good shape for sklearn. Inside this package you have a class (Meteo_data_view) which use five parameters:
  
  -name, this is the name of our csv meteo-france file. It can be just 2016 year, 2016 and 2017 or all the three years available.
  
@@ -30,3 +30,12 @@
  -object.data_good_shape: this one give our transformed dataset ready for machine learning training.
  
  
+ I have added up a file (using exemple) if yoy want to use it. Enjoy !
+ 
+ 
+ Currently the best results i had is when i use all the 3 years, 3 days per sample, hours=1, no dropping with RandomForestClassifier machine learning model (this package store data for classification, not regression). With no max_depth, max_feature=default and n_estimators=300 you will find:
+ 
+ -Direction: around 69 % on the score test.
+ -Force: around 73 % on the score test.
+ -Temperature: around 88% on the score test.
+ -Rain: around 99% (but i'm not really confident on it...) 
