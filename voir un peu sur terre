@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 import gzip
 import glob
 
-import Meteo_terre_traitement_5 as mtt
+import Meteo_terre_traitement as mtt
 
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor
