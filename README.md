@@ -1,6 +1,6 @@
-# meteo_forecast_NO_France
+# meteo_terre_traitement (traitment meteo pour le Nord Ouest de la France).
  
- ce module permet de traiter les trois gros fichiers csv de MeteoNet pour accoucher de 2 array l'un le dataset et l'autre les cibles, prêt pour sklearn !
+ ce module permet de traiter les trois gros fichiers csv de MeteoNet pour accoucher de 2 array l'un le dataset et l'autre les cibles, prêt pour sklearn  !
  
  Il comprend des fonctions et surtout une classe avec les paramètres suivants:
  
