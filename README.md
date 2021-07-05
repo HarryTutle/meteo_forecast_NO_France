@@ -15,7 +15,7 @@
  -cible: indique quel type de variable on veut prédire: la force du vent ('force'), la direction du vent ('direction'), la température ('température').
  
  
- Avec ce module vous trouverez un fichier 'voir un peu' qui donne un exemple sur la façon d'utiliser le module.
+ Avec ce module vous trouverez un fichier 'voir un peu sur terre' qui donne un exemple sur la façon d'utiliser le module.
  
  Amusez-vous bien ! Si il y a des améliorations hésitez pas !
  
