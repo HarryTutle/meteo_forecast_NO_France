@@ -138,6 +138,12 @@ class Meteo_Data_View:
             ci=5
         elif cible=='température':
             ci=8
+        elif cible=='humidité':
+            ci=6
+        elif cible=="pression":
+            ci=9
+        elif cible=='point_rosée':
+            ci=7
     
         for station in self.name['number_sta']:
             
