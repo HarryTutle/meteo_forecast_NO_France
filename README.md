@@ -1,4 +1,4 @@
-# meteo_terre_traitement (traitment meteo pour le Nord Ouest de la France à partir du dataset de meteo france MeteoNet).
+# meteo_terre_traitement (traitement meteo pour le Nord Ouest de la France à partir du dataset de meteo france MeteoNet).
  
  ce module (meteo_terre_traitement) permet de traiter les trois gros fichiers csv de MeteoNet pour accoucher de 2 array l'un le dataset et l'autre les cibles, prêt pour sklearn et de l'apprentissage supervisé  !
  
