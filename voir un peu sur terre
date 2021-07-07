@@ -14,11 +14,11 @@ import matplotlib.pyplot as plt
 import gzip
 import glob
 
-import Meteo_terre_traitement as mtt
+import Meteo_terre_traitement_5 as mtt
 
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor
-
+from sklearn.tree import DecisionTreeClassifier
 chunksize=100000
 chunks=[]
 
@@ -27,14 +27,14 @@ for chunk in pd.read_csv('/home/harry/Documents/projet_station_meteo/NW_Ground_S
 
 for chunk in pd.read_csv('/home/harry/Documents/projet_station_meteo/NW_Ground_Stations/Meteo_NW_2017.csv',chunksize=chunksize):
     chunks.append(chunk)
- 
+
 for chunk in pd.read_csv('/home/harry/Documents/projet_station_meteo/NW_Ground_Stations/Meteo_NW_2018.csv',chunksize=chunksize):
     chunks.append(chunk)
 
 
 data=pd.concat(chunks, axis=0)
 data=data
-meteo=mtt.Meteo_Data_View(data, jours=3, var_corbeille=[], cible='direction', vue=2)
+meteo=mtt.Meteo_Data_View(data, jours=3, var_corbeille=['latitude', 'longitude', 'temps', 'altitude', 'pression' ,'force', 'point_rosée', 'température', 'humidité', 'pluie'], cible='direction', vue=23)
 
 
 dataset=meteo.data_good_shape
@@ -45,7 +45,7 @@ cible=meteo.target
 
 X_train, X_test, y_train, y_test=train_test_split(dataset, cible, test_size=0.2, random_state=0)
 
-model=RandomForestClassifier(n_jobs=2, n_estimators=100, random_state=0)
+model=RandomForestClassifier(random_state=0, max_depth=None, max_features='auto', n_estimators=100, n_jobs=2)
 model.fit(X_train, y_train)
 
 print(model.score(X_train, y_train))
