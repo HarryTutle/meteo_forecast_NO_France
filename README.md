@@ -8,7 +8,7 @@
  
  - jours: par défaut 1. Indique si on veut un échantillon intégrant 1 jour, 2 jours, 3 jours... Plus on met de jours dans nos échantillons, plus les dimensions du dataset grimpent par contre avec moins d'échantillons au final.
 
- - var_corbeille: par défaut vide. C'est une liste où on peut mettre les variables que l'on veut enlever dans notre dataset. Les variables qu'on peut enlever sont: latitude, longitude, altitude, temps, pression, pluie, point_rosée, direction, température, humidité, force. La variable force a été ajoutée dans le dataset, indique quand la mesure a été prise (le mois onc ça va de 1 à 12).
+ - var_corbeille: par défaut vide. C'est une liste où on peut mettre les variables que l'on veut enlever dans notre dataset. Les variables qu'on peut enlever sont: latitude, longitude, altitude, temps, pression, pluie, point_rosée, direction, température, humidité, force. La variable temps a été ajoutée dans le dataset, indique quand la mesure a été prise (le mois donc ça va de 1 à 12).
 
  - vue: par défaut 12 heures. Indique l'heure de la prévision que l'on souhaite; une heure, deux heures, trois heures...Evidemment on est limité par la taille de nos échantillons. Par exemple si l'échantillon comprend une journée, on ne peut pas aller à plus de 23 heures; si c'est 2 jours alors c'est 47 heures etc ...A moins de modifier légèrement le module pour ça.
 
